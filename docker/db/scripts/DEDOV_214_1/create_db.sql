@@ -6,7 +6,7 @@ CREATE TABLE Reader
   Address   text,
   BirthDate date
 );
-insert into Reader (id, lastname, firstname, address, birthdate)
+insert into Reader (id, firstname, lastname, address, birthdate)
 values (1, 'Иван', 'Иванов', 'Москва', '1991-01-01'),
        (2, 'Петр', 'Петров', 'Москва', '1992-01-01'),
        (3, 'Сидр', 'Сидоров', 'Санкт-Петербург', '1993-01-01'),
@@ -94,10 +94,10 @@ insert into Borrowing (ReaderNr, ISBN, CopyNumber, ReturnDate)
 values (1, '123', 1, '2023-01-08'),
        (1, '12345', 1, '2023-01-07'),
        (2, '123', 2, '2023-01-06'),
-       (2, '1234567', 1, '2023-01-04'),
-       (3, '12345678', 3, '2023-01-02'),
+       (2, '1234567', 1, null),
+       (3, '12345678', 3, null),
        (4, '1234', 1, '2023-01-03'),
-       (4, '123', 1, '2023-01-03'),
+       (4, '123', 1, null),
        (4, '123456', 2, '2023-01-02');
 
 create table BookCat
